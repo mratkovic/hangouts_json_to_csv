@@ -15,8 +15,8 @@ This script allows you to convert that file to simpler CSV file containing times
 Run:
 <code> python hangouts_json_to_csv.py  file_json out_dir </code>
 <ul>
-	<li> <file_json> file that you want to convert </li>
-	<li><out_dir> directory in which all generated CSV files will be stored.</li>
+	<li> <code>file_json</code> file that you want to convert </li>
+	<li> <code>out_dir</code> directory in which all generated CSV files will be stored.</li>
 </ul>
 </p>
 
