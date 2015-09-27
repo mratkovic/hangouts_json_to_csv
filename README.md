@@ -13,10 +13,11 @@ This script allows you to convert that file to simpler CSV file containing times
 
 <p>
 Run:
-<code>
-python <script_name> <file_json> <out_dir>
-	<file_json> file that you want to convert
-	<out_dir> directory in which all generated CSV files will be stored.
-</code>
+<code> python hangouts_json_to_csv.py  file_json out_dir </code>
+<ul>
+	<li> <file_json> file that you want to convert </li>
+	<li><out_dir> directory in which all generated CSV files will be stored.</li>
+</ul>
+</p>
 
 
