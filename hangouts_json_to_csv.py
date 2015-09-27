@@ -6,6 +6,10 @@ import os
 DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 
 def main(json_path, out_dir_path):
+    """ Main method, converts Google Hangouts log given in JSON format
+        and stores them in location given as second argument.
+        Logs are stored in CSV format, one file per conversaton. """
+
     if not os.path.isdir(out_dir_path):
         os.mkdir(out_dir_path)
         print("Created {} directory".format(out_dir_path))
@@ -37,6 +41,8 @@ def main(json_path, out_dir_path):
 
 
 def verbose_usage_and_exit():
+    """ Prints usage and exits. """
+
     sys.stderr.write('Usage:\n')
     sys.stderr.write('\tpython <script_name> <file_json> <out_dir>\n'.format(sys.argv[0]))
     exit(0)
@@ -44,6 +50,8 @@ def verbose_usage_and_exit():
 
 
 def find_nodes(root, query):
+    """ Interprets json as tree and finds all nodes with given string. """
+
     if not isinstance(root, dict):
         return []
 
@@ -63,6 +71,8 @@ def find_nodes(root, query):
     return rv
 
 def find_node(root, query):
+    """ Interprets JSON as tree and finds first node with givens string. """
+
     if not isinstance(root, dict):  # skip leaf
         return None
 
@@ -81,6 +91,9 @@ def find_node(root, query):
 
 
 def get_participants(json_data):
+    """ Finds all participants in Google Hangouts JSON log and returns dictionary
+        { user_id : username }. """
+
     all_participant_data = find_nodes(json_data, 'participant_data')
 
     participants_id_map = {}
