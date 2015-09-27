@@ -6,7 +6,7 @@ import os
 DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 
 def main(json_path, out_dir_path):
-    """ Main method, converts Google Hangouts log given in JSON format
+    """ Converts Google Hangouts log given in JSON format
         and stores them in location given as second argument.
         Logs are stored in CSV format, one file per conversaton. """
 
